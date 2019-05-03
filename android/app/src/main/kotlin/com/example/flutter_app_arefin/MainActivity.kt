@@ -1,4 +1,4 @@
-package com.example.flutter_app_arefin
+package com.example.flutter_block_pattern
 
 import android.os.Bundle
 
