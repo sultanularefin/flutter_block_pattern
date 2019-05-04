@@ -69,6 +69,10 @@ class _MyHomePageState extends State<MyHomePage> {
         child: StreamBuilder(
           stream:_bloc.counter,
           initialData: 0,
+
+
+          //  AsyncSnapshot<int> comes from async.dart file.
+          // BuildContext comes framework.dart file.
           builder: (BuildContext context, AsyncSnapshot<int> snapshot) {
             return Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -77,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   'You have pushed the button this many times:',
                 ),
                 Text(
-        //      '$_counter',
+                  //      '$_counter',
                   '${snapshot.data}',
 
                   style: Theme
@@ -96,7 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children:<Widget>[ FloatingActionButton(
-          // onPressed: _incrementCounter,
+            // onPressed: _incrementCounter,
             onPressed:() => _bloc.counterEventSink.add(IncrementEvent()),
             tooltip: 'Increment',
             child: Icon(Icons.add),
@@ -109,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
           )
           ]), // This trailing comma makes auto-formatting nicer for build methods.
     );
-      // );
+    // );
   }
 
 
