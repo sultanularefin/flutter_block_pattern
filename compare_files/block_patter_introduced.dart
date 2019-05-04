@@ -69,10 +69,6 @@ class _MyHomePageState extends State<MyHomePage> {
         child: StreamBuilder(
           stream:_bloc.counter,
           initialData: 0,
-
-
-          //  AsyncSnapshot<int> comes from async.dart file.
-          // BuildContext comes framework.dart file.
           builder: (BuildContext context, AsyncSnapshot<int> snapshot) {
             return Column(
               mainAxisAlignment: MainAxisAlignment.center,
