@@ -14,14 +14,16 @@ class CounterBloc {
 
   //   this one is _counterStateController
   final _counterStateController = StreamController<int>();
+  //  StreamController of type ints
 
-  StreamSink<int> get _inCounter => _counterStateController.sink;
+  //   this one is _counterEventController
+  final _counterEventController = StreamController<CounterEvent>();
+  //  StreamController of type CounterEvents
 
   // For state, exposing only a stream which outputs data
   Stream<int> get counter => _counterStateController.stream;
 
-  //   this one is _counterEventController
-  final _counterEventController = StreamController<CounterEvent>();
+  StreamSink<int> get _inCounter => _counterStateController.sink;
 
   // For events, exposing only a sink which is an input
 
